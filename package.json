@@ -1,5 +1,5 @@
 {
-  "name": "redux",
+  "name": "redux-and-mobx",
   "version": "1.0.0",
   "description": "Redux/MobX 실습 프로젝트 입니다",
   "main": "index.js",
@@ -11,5 +11,8 @@
     "mobx"
   ],
   "author": "Aram Lee",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "redux": "^4.0.4"
+  }
 }
