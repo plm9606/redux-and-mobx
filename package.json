@@ -1,0 +1,15 @@
+{
+  "name": "redux",
+  "version": "1.0.0",
+  "description": "Redux/MobX 실습 프로젝트 입니다",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "redux",
+    "mobx"
+  ],
+  "author": "Aram Lee",
+  "license": "ISC"
+}
