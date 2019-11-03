@@ -1,15 +1,19 @@
 const { createStore } = require("redux");
 const reducer = require("./reducer");
+const { editPost } = require("./actions/post");
+const { login, logout } = require("./actions/user");
 const log = (str, ...rest) => {
   return console.log(str, ...rest);
 };
 
 const initialState = {
-  compA: null,
-  compB: 123,
-  compC: null,
-  user: null,
-  posts: ["hihihi"]
+  user: { isLoggingIn: true, data: null },
+  posts: [],
+  comments: [],
+  favorites: [],
+  history: [],
+  likes: [],
+  followers: []
 };
 
 const store = createStore(reducer, initialState);
@@ -20,28 +24,6 @@ store.subscribe(() => {
   log(`changed`);
 });
 log("first", store.getState());
-
-// 객체가 action이다
-// action 생성자
-const login = data => {
-  return {
-    type: "LOGIN",
-    value: data
-  };
-};
-
-const logout = data => {
-  return {
-    type: "LOGOUT"
-  };
-};
-
-const editPost = data => {
-  return {
-    type: "CHANGE_POST",
-    value: data
-  };
-};
 
 store.dispatch(login({ id: "happy123", name: "kim" }));
 log(store.getState());
